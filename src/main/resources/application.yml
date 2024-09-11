@@ -1,0 +1,23 @@
+# Eureka Server Port
+server:
+  port: 8761
+
+# Eureka Server Name
+#spring:
+#  application:
+#    name: SPRING-JPA-PRJ
+
+# Eureka Server 설정
+eureka:
+  server:
+    enable-self-preservation: true # 네트워크 장애 등 서비스 해제를 막기 위한 보호모드
+  client:
+    register-with-eureka: false # Eureka Server이며, 자기 자신을 Eureka Client로 등록 안함
+    fetch-registry: false # Eureka Server이며, Eureka Server의 레지스트리 조회 안하도록 설정
+
+# End Point 설정
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
